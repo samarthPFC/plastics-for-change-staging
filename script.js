@@ -207,33 +207,41 @@ function handleFormSubmit(e) {
 // ── Awards carousel ──
 (function() {
   const track = document.getElementById('awardsTrack');
+  const viewport = document.querySelector('.awards-viewport');
   const prev = document.getElementById('awardsPrev');
   const next = document.getElementById('awardsNext');
-  if (!track || !prev || !next) return;
+  if (!track || !viewport || !prev || !next) return;
 
   const cards = track.querySelectorAll('.award-card');
   const total = cards.length;
+  const gap = 16;
   let pos = 0;
-  let visible = 5;
 
   function getVisible() {
     const w = window.innerWidth;
     if (w <= 600) return 2;
-    if (w <= 1024) return 3;
+    if (w <= 768) return 3;
     return 5;
   }
 
+  function sizeCards() {
+    const visible = getVisible();
+    const vpWidth = viewport.offsetWidth;
+    const cardW = (vpWidth - gap * (visible - 1)) / visible;
+    cards.forEach(c => { c.style.width = cardW + 'px'; });
+    return cardW;
+  }
+
   function update() {
-    visible = getVisible();
+    const visible = getVisible();
+    const cardW = sizeCards();
     const maxPos = Math.max(0, total - visible);
     pos = Math.min(pos, maxPos);
-    const gap = 20;
-    const cardWidth = (track.parentElement.offsetWidth - gap * (visible - 1)) / visible;
-    track.style.transform = `translateX(-${pos * (cardWidth + gap)}px)`;
+    track.style.transform = `translateX(-${pos * (cardW + gap)}px)`;
   }
 
   prev.addEventListener('click', () => { pos = Math.max(0, pos - 1); update(); });
-  next.addEventListener('click', () => { pos = Math.min(total - getVisible(), pos + 1); update(); });
+  next.addEventListener('click', () => { const visible = getVisible(); pos = Math.min(total - visible, pos + 1); update(); });
   window.addEventListener('resize', update);
   update();
 })();
