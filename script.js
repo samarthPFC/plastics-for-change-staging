@@ -156,6 +156,54 @@ function handleFormSubmit(e) {
   autoTimer = setInterval(() => goTo(current === 0 ? 1 : 0), 5000);
 })();
 
+// ── Testimonials carousel ──
+(function() {
+  const track = document.querySelector('.testimonials-carousel__track');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const prevBtn = document.getElementById('testimPrev');
+  const nextBtn = document.getElementById('testimNext');
+  const dotsContainer = document.getElementById('testimDots');
+  if (!track || !slides.length || !dotsContainer) return;
+
+  let current = 0;
+  const total = slides.length;
+  let autoTimer = null;
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' carousel-dot--active' : '');
+    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index) {
+    current = ((index % total) + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.classList.toggle('carousel-dot--active', i === current)
+    );
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  // Swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { goTo(diff > 0 ? current + 1 : current - 1); resetAuto(); }
+  }, { passive: true });
+
+  autoTimer = setInterval(() => goTo(current + 1), 5000);
+})();
+
 // ── Smooth scroll for anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
