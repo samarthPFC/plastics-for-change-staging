@@ -422,7 +422,7 @@ input, select, textarea { font-family: inherit; }
 .awards-carousel { display: flex; align-items: center; gap: 12px; max-width: 1200px; margin: 40px auto 0; padding: 0 24px; }
 .awards-viewport { flex: 1; overflow: hidden; }
 .awards-track { display: flex; gap: 16px; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
-.award-card { flex: 0 0 auto; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 12px; display: flex; align-items: center; justify-content: center; height: 180px; transition: all var(--transition); }
+.award-card { flex: 0 0 auto; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-xl); padding: 24px; display: flex; align-items: center; justify-content: center; height: 320px; transition: all var(--transition); }
 .award-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .award-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .awards-arrow { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); color: var(--near-black); font-size: 1.1rem; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all var(--transition); }
