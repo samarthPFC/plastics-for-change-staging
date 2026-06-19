@@ -179,6 +179,23 @@ input, select, textarea { font-family: inherit; }
 @keyframes scrollHint { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
 /* ════════════════════════════════════════
+   MISSION SECTION
+════════════════════════════════════════ */
+.mission-section { padding: 100px 0; background: var(--white); }
+.mission-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 48px; }
+.mission-image { max-width: 900px; width: 100%; }
+.mission-image img { width: 100%; height: auto; object-fit: contain; }
+.mission-content { max-width: 720px; }
+.mission-lead { font-size: clamp(1.1rem, 2.5vw, 1.35rem); color: var(--mid); line-height: 1.75; margin-bottom: 40px; }
+.mission-block h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: var(--near-black); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+.mission-block p { font-size: 1.05rem; color: var(--muted); line-height: 1.75; }
+
+@media (max-width: 768px) {
+  .mission-section { padding: 72px 0; }
+  .mission-inner { gap: 32px; }
+}
+
+/* ════════════════════════════════════════
    AUDIENCE SPLIT
 ════════════════════════════════════════ */
 .audience-split { padding: 100px 0; background: var(--bg); }
