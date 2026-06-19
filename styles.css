@@ -236,35 +236,28 @@ input, select, textarea { font-family: inherit; }
    STATS BAR
 ════════════════════════════════════════ */
 /* ════════════════════════════════════════
-   WHY WE EXIST
+   WHY WE EXIST (COMBINED)
 ════════════════════════════════════════ */
-.why-we-exist { padding: 100px 0; background: var(--bg); }
-.why-we-exist__title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--near-black); text-align: center; letter-spacing: -0.02em; margin-bottom: 16px; }
-.why-we-exist__sub { font-size: 1.05rem; color: var(--muted); text-align: center; margin-bottom: 56px; max-width: 600px; margin-left: auto; margin-right: auto; }
-.why-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.why-stat { text-align: center; padding: 40px 28px; }
-.why-stat__number { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: var(--green); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.2; }
-.why-stat__number sub { font-size: 0.65em; vertical-align: baseline; position: relative; top: 0.2em; }
-.why-stat p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; max-width: 260px; margin: 0 auto; }
+.why-section { padding: 80px 0; background: var(--near-black); }
+.why-section__header { text-align: center; margin-bottom: 48px; }
+.why-section__header h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: var(--white); letter-spacing: -0.02em; margin-bottom: 12px; }
+.why-section__header p { font-size: 1rem; color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto; }
+.why-section__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.why-card { border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; transition: all var(--transition); }
+.why-card:hover { transform: translateY(-3px); }
+.why-card--stat { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
+.why-card--stat:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.09); }
+.why-card__number { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; color: #6fb8e3; letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px; }
+.why-card__number sub { font-size: 0.6em; }
+.why-card--stat p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+.why-card--commitment { background: var(--white); border: 1px solid var(--border); }
+.why-card--commitment:hover { border-color: var(--green); box-shadow: var(--shadow-md); }
+.why-card__icon { font-size: 2rem; margin-bottom: 12px; }
+.why-card--commitment h4 { font-size: 0.85rem; font-weight: 700; color: var(--near-black); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+.why-card--commitment p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
-/* ════════════════════════════════════════
-   OUR COMMITMENT
-════════════════════════════════════════ */
-.our-commitment { padding: 80px 0 100px; background: var(--bg); }
-.our-commitment__title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--near-black); text-align: center; letter-spacing: -0.02em; margin-bottom: 16px; }
-.our-commitment__sub { font-size: 1.05rem; color: var(--muted); text-align: center; margin-bottom: 56px; max-width: 660px; margin-left: auto; margin-right: auto; }
-.commitment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.commitment-card { text-align: center; padding: 48px 32px; background: var(--white); border-radius: var(--radius-xl); border: 1.5px solid var(--border); transition: all var(--transition); }
-.commitment-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
-.commitment-card__icon { font-size: 2.8rem; margin-bottom: 20px; }
-.commitment-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--near-black); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
-.commitment-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-
-@media (max-width: 768px) {
-  .why-stats-grid { grid-template-columns: 1fr; gap: 16px; }
-  .commitment-grid { grid-template-columns: 1fr; }
-  .why-stat { padding: 24px 20px; }
-}
+@media (max-width: 1024px) { .why-section__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .why-section__grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ════════════════════════════════════════
    STATS BAR
