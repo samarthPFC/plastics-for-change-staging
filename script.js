@@ -114,6 +114,48 @@ function handleFormSubmit(e) {
   `;
 }
 
+// ── Why-scroll horizontal panels ──
+(function() {
+  const track = document.querySelector('.why-scroll__track');
+  const dots = document.querySelectorAll('.why-scroll__dot');
+  if (!track || !dots.length) return;
+
+  let current = 0;
+  let autoTimer = null;
+
+  function goTo(index) {
+    current = index;
+    track.style.transform = `translateX(-${index * 50}%)`;
+    dots.forEach((d, i) => d.classList.toggle('why-scroll__dot--active', i === index));
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.panel, 10));
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current === 0 ? 1 : 0), 6000);
+    });
+  });
+
+  // Swipe support
+  let startX = 0;
+  const section = document.querySelector('.why-scroll');
+  if (section) {
+    section.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    section.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goTo(diff > 0 ? 1 : 0);
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => goTo(current === 0 ? 1 : 0), 6000);
+      }
+    }, { passive: true });
+  }
+
+  // Auto-rotate every 5 seconds
+  autoTimer = setInterval(() => goTo(current === 0 ? 1 : 0), 5000);
+})();
+
 // ── Smooth scroll for anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
