@@ -227,6 +227,8 @@ input, select, textarea { font-family: inherit; }
 .stat-number { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--white); letter-spacing: -0.03em; line-height: 1; }
 .stat-suffix { font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 900; color: #6fb8e3; }
 .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 10px; font-weight: 500; }
+.stats-grid--five { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 768px) { .stats-grid--five { grid-template-columns: repeat(2, 1fr); } }
 
 /* ════════════════════════════════════════
    VIDEO FEATURE
