@@ -220,15 +220,17 @@ input, select, textarea { font-family: inherit; }
 /* ════════════════════════════════════════
    STATS BAR
 ════════════════════════════════════════ */
-.stats-bar { background: var(--green-dark); padding: 72px 0; }
+.stats-bar { background: var(--green-dark); padding: 80px 0; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat-item { text-align: center; padding: 24px 20px; position: relative; }
-.stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; bottom: 20%; width: 1px; background: rgba(255,255,255,0.15); }
-.stat-number { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--white); letter-spacing: -0.03em; line-height: 1; }
-.stat-suffix { font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 900; color: #6fb8e3; }
-.stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 10px; font-weight: 500; }
+.stat-item { text-align: center; padding: 28px 16px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+.stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 20%; bottom: 20%; width: 1px; background: rgba(255,255,255,0.12); }
+.stat-num-wrap { display: flex; align-items: baseline; justify-content: center; gap: 2px; margin-bottom: 14px; }
+.stat-number { font-family: var(--font-serif); font-size: clamp(2.8rem, 4.5vw, 3.8rem); font-weight: 900; color: var(--white); letter-spacing: -0.03em; line-height: 1; }
+.stat-suffix { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: #6fb8e3; }
+.stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-weight: 500; line-height: 1.45; max-width: 160px; }
 .stats-grid--five { grid-template-columns: repeat(5, 1fr); }
-@media (max-width: 768px) { .stats-grid--five { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1024px) { .stats-grid--five { grid-template-columns: repeat(3, 1fr); } .stats-grid--five .stat-item:nth-child(3)::after { display: none; } }
+@media (max-width: 768px) { .stats-grid, .stats-grid--five { grid-template-columns: repeat(2, 1fr); } .stats-grid .stat-item:nth-child(2n)::after, .stats-grid--five .stat-item:nth-child(2n)::after { display: none; } }
 
 /* ════════════════════════════════════════
    VIDEO FEATURE
