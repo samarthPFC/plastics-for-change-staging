@@ -70,6 +70,14 @@
 }
 .portfolio-card .spec-list { margin-bottom: 28px; flex: 1; }
 
+.portfolio-grid--five { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.portfolio-card--compact .portfolio-card__img { height: 160px; }
+.portfolio-card--compact .portfolio-card__body { padding: 24px 20px; }
+.portfolio-card--compact .portfolio-card__body h3 { font-size: 1.15rem; }
+
+@media (max-width: 1100px) { .portfolio-grid--five { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .portfolio-grid--five { grid-template-columns: 1fr; } }
+
 /* ════════════════════════════════════════
    QUALITY STANDARDS
 ════════════════════════════════════════ */
@@ -89,6 +97,8 @@
 }
 .quality-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--near-black); margin-bottom: 10px; }
 .quality-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+.quality-grid--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 768px) { .quality-grid--three { grid-template-columns: 1fr; } }
 
 /* ════════════════════════════════════════
    BUSINESS ADVANTAGES
