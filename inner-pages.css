@@ -140,6 +140,20 @@
 }
 
 /* ════════════════════════════════════════
+   BUSINESS VALUE
+════════════════════════════════════════ */
+.business-value { padding: 100px 0; background: var(--bg); }
+.value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+.value-card { padding: 36px 28px; background: var(--white); border-radius: var(--radius-lg); border: 1.5px solid var(--border); transition: all var(--transition); }
+.value-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.value-card__icon { font-size: 2rem; margin-bottom: 16px; }
+.value-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--near-black); margin-bottom: 10px; }
+.value-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+@media (max-width: 1100px) { .value-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .value-grid { grid-template-columns: 1fr; } }
+
+/* ════════════════════════════════════════
    PAGE CONTACT (reuses base contact styles)
 ════════════════════════════════════════ */
 .page-contact { padding: 100px 0; background: var(--bg); }
