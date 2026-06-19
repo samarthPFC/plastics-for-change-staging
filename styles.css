@@ -422,7 +422,7 @@ input, select, textarea { font-family: inherit; }
 .awards-carousel { display: flex; align-items: center; gap: 16px; max-width: 1200px; margin: 40px auto 0; padding: 0 24px; }
 .awards-viewport { flex: 1; overflow: hidden; }
 .awards-track { display: flex; gap: 20px; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
-.award-card { min-width: calc((100% - 80px) / 5); flex-shrink: 0; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; transition: all var(--transition); }
+.award-card { width: calc((100% - 80px) / 5); min-width: calc((100% - 80px) / 5); max-width: calc((100% - 80px) / 5); flex-shrink: 0; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; transition: all var(--transition); }
 .award-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .award-card img { width: 100%; height: 100%; object-fit: contain; }
 .awards-arrow { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); color: var(--near-black); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all var(--transition); }
