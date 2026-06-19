@@ -219,9 +219,9 @@ function handleFormSubmit(e) {
 
   function getVisible() {
     const w = window.innerWidth;
-    if (w <= 600) return 2;
-    if (w <= 768) return 3;
-    return 5;
+    if (w <= 600) return 1;
+    if (w <= 768) return 2;
+    return 3;
   }
 
   function sizeCards() {
