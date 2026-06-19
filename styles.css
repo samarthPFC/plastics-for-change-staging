@@ -97,6 +97,8 @@ input, select, textarea { font-family: inherit; }
 .logo-mark { width: 36px; height: 36px; background: var(--green); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 900; letter-spacing: 0.05em; }
 .logo-mark--sm { width: 30px; height: 30px; font-size: 0.6rem; }
 .logo-text { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: -0.01em; }
+.nav__logo-img { height: 40px; width: auto; object-fit: contain; }
+.footer__logo-img { height: 36px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
 
 .nav__links { display: flex; align-items: center; gap: 4px; flex: 1; }
 .nav__links > li { position: relative; }
