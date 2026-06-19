@@ -520,9 +520,9 @@ input, select, textarea { font-family: inherit; }
 .brands-marquee::after { right: 0; background: linear-gradient(to left, var(--white), transparent); }
 .brands-marquee__track { display: flex; gap: 56px; animation: marqueeScroll 40s linear infinite; width: max-content; }
 .brands-marquee__track:hover { animation-play-state: paused; }
-.brands-marquee__item { flex-shrink: 0; display: flex; align-items: center; justify-content: center; height: 56px; }
-.brands-marquee__item img { max-height: 44px; max-width: 130px; width: auto; height: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.45; transition: all 0.4s ease; }
-.brands-marquee__item img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.12); }
+.brands-marquee__item { flex-shrink: 0; display: flex; align-items: center; justify-content: center; height: 120px; }
+.brands-marquee__item img { max-height: 100px; max-width: 220px; width: auto; height: auto; object-fit: contain; transition: all 0.4s ease; }
+.brands-marquee__item img:hover { transform: scale(1.08); }
 @keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ════════════════════════════════════════
