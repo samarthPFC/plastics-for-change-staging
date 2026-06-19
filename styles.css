@@ -98,10 +98,11 @@ input, select, textarea { font-family: inherit; }
 .logo-mark--sm { width: 30px; height: 30px; font-size: 0.6rem; }
 .logo-text { font-size: 0.95rem; font-weight: 700; color: var(--white); letter-spacing: -0.01em; }
 .nav.scrolled .logo-text { color: var(--near-black); }
-.nav.scrolled .nav__links > li > a { color: var(--mid); }
-.nav.scrolled .nav__links > li > a:hover, .nav.scrolled .nav__links > li.has-dropdown:hover > a { color: var(--near-black); background: var(--bg); }
+.nav.scrolled .nav__links > li > a { color: var(--dark); }
+.nav.scrolled .nav__links > li > a:hover, .nav.scrolled .nav__links > li.has-dropdown:hover > a { color: var(--green); background: var(--bg); }
 .nav.scrolled .nav-chevron { color: var(--muted); }
 .nav.scrolled .nav__hamburger span { background: var(--near-black); }
+.nav.scrolled .btn--primary { background: var(--green); color: var(--white); }
 .nav__logo-img { height: 56px; width: auto; object-fit: contain; }
 .nav.scrolled .nav__logo-img { filter: none; }
 .footer__logo-img { height: 36px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
