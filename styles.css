@@ -510,34 +510,38 @@ input, select, textarea { font-family: inherit; }
 .resource-card__cta { font-size: 0.85rem; font-weight: 700; color: var(--green); }
 
 /* ════════════════════════════════════════
-   BRANDS SECTION
+   BRANDS MARQUEE
 ════════════════════════════════════════ */
-.brands-section { background: var(--green-dark); }
-.brands-inner { display: grid; grid-template-columns: 1fr 1.6fr; min-height: 520px; }
-.brands-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; background: var(--green-dark); }
-.brands-text h2 { font-family: var(--font-sans); font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 700; color: var(--white); line-height: 1.5; margin-bottom: 24px; }
-.brands-text p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
-.brands-logos { background: var(--white); padding: 48px 56px; display: flex; align-items: center; }
-.brands-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 40px; width: 100%; }
-.brand-logo-item { display: flex; align-items: center; justify-content: center; height: 60px; }
-.brand-logo-item img { max-height: 48px; max-width: 120px; width: auto; height: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all var(--transition); }
-.brand-logo-item img:hover { filter: grayscale(0%); opacity: 1; }
-
-@media (max-width: 900px) {
-  .brands-inner { grid-template-columns: 1fr; }
-  .brands-text { padding: 60px 32px; text-align: center; }
-  .brands-logos { padding: 40px 32px; }
-  .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-}
-@media (max-width: 480px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+.brands-marquee-section { padding: 80px 0 0; background: var(--white); overflow: hidden; }
+.brands-marquee__title { font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 900; color: var(--near-black); text-align: center; max-width: 640px; margin: 0 auto 56px; line-height: 1.45; letter-spacing: -0.02em; }
+.brands-marquee { padding: 40px 0 80px; position: relative; }
+.brands-marquee::before, .brands-marquee::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none; }
+.brands-marquee::before { left: 0; background: linear-gradient(to right, var(--white), transparent); }
+.brands-marquee::after { right: 0; background: linear-gradient(to left, var(--white), transparent); }
+.brands-marquee__track { display: flex; gap: 56px; animation: marqueeScroll 40s linear infinite; width: max-content; }
+.brands-marquee__track:hover { animation-play-state: paused; }
+.brands-marquee__item { flex-shrink: 0; display: flex; align-items: center; justify-content: center; height: 56px; }
+.brands-marquee__item img { max-height: 44px; max-width: 130px; width: auto; height: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.45; transition: all 0.4s ease; }
+.brands-marquee__item img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.12); }
+@keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ════════════════════════════════════════
    CAREERS / JOIN US
 ════════════════════════════════════════ */
-.careers-section { padding: 80px 0; background: var(--bg); }
-.careers-inner { text-align: center; max-width: 700px; margin: 0 auto; }
-.careers-inner h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--near-black); letter-spacing: -0.02em; margin-bottom: 16px; }
-.careers-inner p { font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
+.careers-section { padding: 100px 0; background: var(--near-black); position: relative; overflow: hidden; }
+.careers-section::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(26,106,180,0.15) 0%, transparent 70%); pointer-events: none; }
+.careers-inner { position: relative; z-index: 1; }
+.careers-content { max-width: 640px; margin: 0 auto; text-align: center; }
+.careers-content h2 { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--white); letter-spacing: -0.03em; margin-bottom: 20px; }
+.careers-content > p { font-size: 1.05rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 48px; }
+.careers-stats { display: flex; justify-content: center; gap: 48px; margin-bottom: 48px; }
+.careers-stat { text-align: center; }
+.careers-stat span { display: block; font-family: var(--font-serif); font-size: 2rem; font-weight: 900; color: #6fb8e3; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+.careers-stat small { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+@media (max-width: 600px) {
+  .careers-stats { flex-direction: column; gap: 24px; }
+}
 
 /* ════════════════════════════════════════
    CTA STRIP
