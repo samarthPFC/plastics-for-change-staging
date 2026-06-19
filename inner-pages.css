@@ -1,0 +1,182 @@
+/* ═══════════════════════════════════════════════
+   INNER PAGES — Shared styles for product/detail pages
+═══════════════════════════════════════════════ */
+
+/* ════════════════════════════════════════
+   PAGE HERO
+════════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__photo { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.page-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(10,15,13,0.5) 0%, rgba(10,15,13,0.85) 100%);
+}
+.page-hero__inner {
+  position: relative; z-index: 1;
+  padding-top: 120px; padding-bottom: 60px;
+}
+.page-hero__breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; color: rgba(255,255,255,0.45);
+  margin-bottom: 20px;
+}
+.page-hero__breadcrumb a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+.page-hero__breadcrumb a:hover { color: var(--white); }
+.page-hero__breadcrumb span { color: rgba(255,255,255,0.3); }
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900; line-height: 1.1;
+  color: var(--white); letter-spacing: -0.03em;
+  margin-bottom: 20px; max-width: 700px;
+}
+.page-hero__sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255,255,255,0.65); line-height: 1.7;
+  margin-bottom: 36px; max-width: 560px;
+}
+.page-hero__ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+/* ════════════════════════════════════════
+   PRODUCT PORTFOLIO
+════════════════════════════════════════ */
+.product-portfolio { padding: 100px 0; background: var(--bg); }
+.portfolio-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.portfolio-card {
+  background: var(--white); border-radius: var(--radius-xl);
+  border: 1.5px solid var(--border); overflow: hidden;
+  transition: all var(--transition); display: flex; flex-direction: column;
+}
+.portfolio-card:hover { border-color: var(--green); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.portfolio-card__img { height: 220px; overflow: hidden; }
+.portfolio-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.portfolio-card:hover .portfolio-card__img img { transform: scale(1.05); }
+.portfolio-card__body { padding: 32px; display: flex; flex-direction: column; flex: 1; }
+.portfolio-card__body h3 {
+  font-family: var(--font-serif); font-size: 1.4rem;
+  font-weight: 900; color: var(--near-black); margin-bottom: 12px;
+}
+.portfolio-card__body > p {
+  font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px;
+}
+.portfolio-card .spec-list { margin-bottom: 28px; flex: 1; }
+
+/* ════════════════════════════════════════
+   QUALITY STANDARDS
+════════════════════════════════════════ */
+.quality-section { padding: 100px 0; background: var(--white); }
+.quality-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.quality-card {
+  padding: 36px 28px; background: var(--bg);
+  border-radius: var(--radius-lg); border: 1.5px solid var(--border);
+  transition: all var(--transition);
+}
+.quality-card:hover { border-color: var(--green); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.quality-card__num {
+  font-family: var(--font-serif); font-size: 2.5rem;
+  font-weight: 900; color: var(--green-muted); line-height: 1; margin-bottom: 16px;
+}
+.quality-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--near-black); margin-bottom: 10px; }
+.quality-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+/* ════════════════════════════════════════
+   BUSINESS ADVANTAGES
+════════════════════════════════════════ */
+.advantages-section { padding: 100px 0; background: var(--near-black); }
+.advantages-inner {
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 72px; align-items: start;
+}
+.advantages-content .section-eyebrow { color: rgba(255,255,255,0.5); }
+.advantages-content h2 {
+  font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900; color: var(--white); letter-spacing: -0.02em;
+  margin-bottom: 20px; line-height: 1.15;
+}
+.advantages-content > p { color: rgba(255,255,255,0.6); line-height: 1.7; }
+.advantages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.advantage-card {
+  padding: 28px 24px; background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg);
+  transition: all var(--transition);
+}
+.advantage-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
+.advantage-card__icon { font-size: 1.8rem; margin-bottom: 14px; }
+.advantage-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.advantage-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+/* ════════════════════════════════════════
+   CERTIFICATIONS BAR
+════════════════════════════════════════ */
+.cert-bar { padding: 48px 0; background: var(--green-dark); }
+.cert-bar__label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  text-align: center; margin-bottom: 24px;
+}
+.cert-bar__items {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;
+}
+.cert-bar__item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 20px; background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 100px;
+  color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 500;
+}
+.cert-bar__badge {
+  width: 22px; height: 22px; background: rgba(255,255,255,0.15);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 900; color: #6fb8e3;
+}
+
+/* ════════════════════════════════════════
+   PAGE CONTACT (reuses base contact styles)
+════════════════════════════════════════ */
+.page-contact { padding: 100px 0; background: var(--bg); }
+
+/* ════════════════════════════════════════
+   RELATED PRODUCTS
+════════════════════════════════════════ */
+.related-products { padding: 100px 0; background: var(--white); }
+.related-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;
+}
+.related-card {
+  border-radius: var(--radius-lg); border: 1.5px solid var(--border);
+  overflow: hidden; transition: all var(--transition); background: var(--bg);
+  display: flex; flex-direction: column; color: var(--dark);
+}
+.related-card:hover { border-color: var(--green); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.related-card__img { height: 180px; overflow: hidden; }
+.related-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.related-card:hover .related-card__img img { transform: scale(1.06); }
+.related-card__body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.related-card__body h4 { font-size: 1.1rem; font-weight: 700; color: var(--near-black); margin-bottom: 8px; }
+.related-card__body p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+.related-card__cta { font-size: 0.88rem; font-weight: 700; color: var(--green); }
+
+/* ════════════════════════════════════════
+   RESPONSIVE — INNER PAGES
+════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .quality-grid { grid-template-columns: repeat(2, 1fr); }
+  .advantages-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 768px) {
+  .page-hero { min-height: 420px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .quality-grid { grid-template-columns: 1fr; }
+  .advantages-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .cert-bar__items { flex-direction: column; align-items: center; }
+}
