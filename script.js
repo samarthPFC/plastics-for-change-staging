@@ -204,6 +204,40 @@ function handleFormSubmit(e) {
   autoTimer = setInterval(() => goTo(current + 1), 5000);
 })();
 
+// ── Awards carousel ──
+(function() {
+  const track = document.getElementById('awardsTrack');
+  const prev = document.getElementById('awardsPrev');
+  const next = document.getElementById('awardsNext');
+  if (!track || !prev || !next) return;
+
+  const cards = track.querySelectorAll('.award-card');
+  const total = cards.length;
+  let pos = 0;
+  let visible = 5;
+
+  function getVisible() {
+    const w = window.innerWidth;
+    if (w <= 600) return 2;
+    if (w <= 1024) return 3;
+    return 5;
+  }
+
+  function update() {
+    visible = getVisible();
+    const maxPos = Math.max(0, total - visible);
+    pos = Math.min(pos, maxPos);
+    const gap = 20;
+    const cardWidth = (track.parentElement.offsetWidth - gap * (visible - 1)) / visible;
+    track.style.transform = `translateX(-${pos * (cardWidth + gap)}px)`;
+  }
+
+  prev.addEventListener('click', () => { pos = Math.max(0, pos - 1); update(); });
+  next.addEventListener('click', () => { pos = Math.min(total - getVisible(), pos + 1); update(); });
+  window.addEventListener('resize', update);
+  update();
+})();
+
 // ── Smooth scroll for anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
