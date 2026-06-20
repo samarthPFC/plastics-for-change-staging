@@ -189,9 +189,10 @@ input, select, textarea { font-family: inherit; }
    MISSION SECTION
 ════════════════════════════════════════ */
 .mission-section { padding: 80px 0; background: var(--white); }
-.mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; }
 .mission-col { display: flex; flex-direction: column; justify-content: center; }
-.mission-col--img img { width: 100%; height: auto; object-fit: contain; }
+.mission-col--img { display: flex; align-items: center; }
+.mission-col--img img { width: 100%; height: 100%; object-fit: contain; }
 .mission-lead { font-size: 1.1rem; color: var(--mid); line-height: 1.75; margin-bottom: 32px; }
 .mission-heading { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--near-black); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 14px; }
 .mission-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; }
