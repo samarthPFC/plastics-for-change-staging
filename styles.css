@@ -189,7 +189,7 @@ input, select, textarea { font-family: inherit; }
    MISSION SECTION
 ════════════════════════════════════════ */
 .mission-section { padding: 120px 0; background: var(--white); }
-.mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; }
+.mission-row { display: grid; grid-template-columns: 1.5fr 1fr; gap: 64px; align-items: center; }
 .mission-col { display: flex; flex-direction: column; justify-content: center; }
 .mission-col--img { display: flex; align-items: center; }
 .mission-col--img img { width: 100%; height: auto; object-fit: contain; }
