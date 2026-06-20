@@ -192,7 +192,7 @@ input, select, textarea { font-family: inherit; }
 .mission-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 48px; align-items: center; }
 .mission-col { display: flex; flex-direction: column; justify-content: center; }
 .mission-col--img { flex-shrink: 0; }
-.mission-col--img img { width: 320px; height: auto; object-fit: contain; }
+.mission-col--img img { width: 960px; height: auto; object-fit: contain; }
 .mission-lead { font-size: 1.1rem; color: var(--mid); line-height: 1.75; text-align: right; }
 .mission-heading { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 900; color: var(--near-black); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 12px; }
 .mission-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
