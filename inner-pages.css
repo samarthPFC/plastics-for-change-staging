@@ -202,6 +202,7 @@
 .webinar-card__info { padding: 24px 28px; }
 .webinar-card__date { font-size: 0.78rem; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; display: block; }
 .webinar-card__info h3 { font-size: 1.1rem; font-weight: 700; color: var(--near-black); line-height: 1.4; }
+.webinar-card__desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-top: 8px; }
 
 @media (max-width: 768px) { .webinars-list { grid-template-columns: 1fr; } }
 
