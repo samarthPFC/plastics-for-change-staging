@@ -371,7 +371,8 @@ input, select, textarea { font-family: inherit; }
 .product-card:hover .product-card__body > p { color: rgba(255,255,255,0.8); }
 .product-card:hover .spec-list li { color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.15); }
 .product-card:hover .spec-list li::before { color: #6fb8e3; }
-.product-card:hover .btn--outline { color: var(--white); border-color: rgba(255,255,255,0.4); }
+.product-card:hover .btn--outline { color: var(--white); border-color: rgba(255,255,255,0.4); background: transparent; }
+.product-card:hover .btn--outline:hover { background: rgba(255,255,255,0.15); }
 .product-card--alt { background: var(--white); border-color: var(--border); }
 .product-card--alt .product-card__body h3 { color: var(--near-black); }
 .product-card--alt .product-card__sub { color: var(--muted); }
