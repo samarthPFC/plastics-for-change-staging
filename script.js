@@ -246,6 +246,32 @@ function handleFormSubmit(e) {
   update();
 })();
 
+// ── Beach cleanup before/after slider ──
+(function() {
+  const slider = document.getElementById('beachSlider');
+  const dirty = document.getElementById('beachDirty');
+  const handle = document.getElementById('beachHandle');
+  if (!slider || !dirty || !handle) return;
+
+  let isDragging = false;
+
+  function setPosition(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((x - rect.left) / rect.width) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    dirty.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    handle.style.left = pct + '%';
+  }
+
+  slider.addEventListener('mousedown', (e) => { isDragging = true; setPosition(e.clientX); });
+  window.addEventListener('mousemove', (e) => { if (isDragging) setPosition(e.clientX); });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => { isDragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove', (e) => { if (isDragging) setPosition(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchend', () => { isDragging = false; });
+})();
+
 // ── Smooth scroll for anchor links ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {

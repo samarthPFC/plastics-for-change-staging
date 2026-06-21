@@ -546,6 +546,27 @@ input, select, textarea { font-family: inherit; }
 .careers-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
 
 /* ════════════════════════════════════════
+   BEACH CLEANUP
+════════════════════════════════════════ */
+.beach-cleanup { padding: 100px 0; background: var(--white); }
+.beach-cleanup__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.beach-cleanup__visual { position: relative; }
+.beach-slider { position: relative; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/3; cursor: col-resize; user-select: none; -webkit-user-select: none; }
+.beach-slider__clean, .beach-slider__dirty { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.beach-slider__dirty { clip-path: inset(0 0 0 0); z-index: 1; }
+.beach-slider__handle { position: absolute; top: 0; bottom: 0; left: 50%; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: translateX(-50%); pointer-events: none; }
+.beach-slider__handle-line { width: 3px; flex: 1; background: var(--white); box-shadow: 0 0 6px rgba(0,0,0,0.3); }
+.beach-slider__handle-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--white); box-shadow: 0 2px 12px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--green-dark); flex-shrink: 0; }
+.beach-cleanup__caption { text-align: center; font-size: 0.82rem; color: var(--muted); margin-top: 16px; font-weight: 500; }
+.beach-cleanup__form .section-eyebrow { margin-bottom: 12px; }
+.beach-cleanup__form h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--near-black); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+.beach-cleanup__form > p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
+
+@media (max-width: 900px) {
+  .beach-cleanup__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ════════════════════════════════════════
    CTA STRIP
 ════════════════════════════════════════ */
 .cta-strip { padding: 100px 0; background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); position: relative; overflow: hidden; }
