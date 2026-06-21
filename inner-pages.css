@@ -191,6 +191,21 @@
 .related-card__cta { font-size: 0.88rem; font-weight: 700; color: var(--green); }
 
 /* ════════════════════════════════════════
+   WEBINARS
+════════════════════════════════════════ */
+.webinars-section { padding: 80px 0; background: var(--bg); }
+.webinars-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.webinar-card { background: var(--white); border-radius: var(--radius-xl); border: 1.5px solid var(--border); overflow: hidden; transition: all var(--transition); }
+.webinar-card:hover { border-color: var(--green); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.webinar-card__video { position: relative; aspect-ratio: 16/9; background: var(--near-black); }
+.webinar-card__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.webinar-card__info { padding: 24px 28px; }
+.webinar-card__date { font-size: 0.78rem; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; display: block; }
+.webinar-card__info h3 { font-size: 1.1rem; font-weight: 700; color: var(--near-black); line-height: 1.4; }
+
+@media (max-width: 768px) { .webinars-list { grid-template-columns: 1fr; } }
+
+/* ════════════════════════════════════════
    RESPONSIVE — INNER PAGES
 ════════════════════════════════════════ */
 @media (max-width: 1100px) {
