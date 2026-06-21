@@ -539,19 +539,14 @@ input, select, textarea { font-family: inherit; }
 /* ════════════════════════════════════════
    CAREERS / JOIN US
 ════════════════════════════════════════ */
-.careers-section { padding: 100px 0; background: var(--bg); position: relative; overflow: hidden; }
-.careers-section::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(26,106,180,0.08) 0%, transparent 70%); pointer-events: none; }
-.careers-inner { position: relative; z-index: 1; }
-.careers-content { max-width: 640px; margin: 0 auto; text-align: center; }
-.careers-content h2 { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--near-black); letter-spacing: -0.03em; margin-bottom: 20px; }
-.careers-content > p { font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 48px; }
-.careers-stats { display: flex; justify-content: center; gap: 48px; margin-bottom: 48px; }
-.careers-stat { text-align: center; }
-.careers-stat span { display: block; font-family: var(--font-serif); font-size: 2rem; font-weight: 900; color: var(--green); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
-.careers-stat small { font-size: 0.82rem; color: var(--muted); }
+.careers-section { padding: 56px 0; background: var(--bg); }
+.careers-compact { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.careers-compact h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 900; color: var(--near-black); letter-spacing: -0.02em; white-space: nowrap; flex-shrink: 0; }
+.careers-compact p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; max-width: 480px; flex: 1; }
+.careers-compact .btn { flex-shrink: 0; }
 
-@media (max-width: 600px) {
-  .careers-stats { flex-direction: column; gap: 24px; }
+@media (max-width: 768px) {
+  .careers-compact { flex-direction: column; text-align: center; gap: 16px; }
 }
 
 /* ════════════════════════════════════════
