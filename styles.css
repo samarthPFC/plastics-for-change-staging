@@ -539,15 +539,10 @@ input, select, textarea { font-family: inherit; }
 /* ════════════════════════════════════════
    CAREERS / JOIN US
 ════════════════════════════════════════ */
-.careers-section { padding: 56px 0; background: var(--bg); }
-.careers-compact { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.careers-compact h2 { font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 900; color: var(--near-black); letter-spacing: -0.02em; white-space: nowrap; flex-shrink: 0; }
-.careers-compact p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; max-width: 480px; flex: 1; }
-.careers-compact .btn { flex-shrink: 0; }
-
-@media (max-width: 768px) {
-  .careers-compact { flex-direction: column; text-align: center; gap: 16px; }
-}
+.careers-section { padding: 60px 0; background: var(--bg); }
+.careers-content { max-width: 600px; margin: 0 auto; text-align: center; }
+.careers-content h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--near-black); letter-spacing: -0.02em; margin-bottom: 14px; }
+.careers-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
 
 /* ════════════════════════════════════════
    CTA STRIP
