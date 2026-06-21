@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annual Reports | Plastics For Change</title>
+  <meta name="description" content="Download Plastics For Change annual reports. Full transparency on collector outcomes, plastic volumes, community investments, and financial performance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="inner-pages.css" />
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="logo.png" alt="Plastics For Change" class="nav__logo-img" /></a>
+      <ul class="nav__links">
+        <li class="has-dropdown"><a href="recycled-plastics.html">Recycled Plastics <span class="nav-chevron">▾</span></a><div class="dropdown"><div class="dropdown__inner"><div class="dropdown__col"><p class="dropdown__label">Materials</p><a href="rpet.html" class="dropdown__link"><span class="dropdown__icon">♻️</span><span><strong>rPET</strong><small>Recycled Polyethylene Terephthalate</small></span></a><a href="rpe-rpp.html" class="dropdown__link"><span class="dropdown__icon">🔵</span><span><strong>rPE & rPP</strong><small>Recycled Polyethylene & Polypropylene</small></span></a><a href="fibers-yarns.html" class="dropdown__link"><span class="dropdown__icon">🧵</span><span><strong>Fibers & Yarns</strong><small>Recycled textile inputs</small></span></a></div><div class="dropdown__promo"><img src="RawMaterials.png" alt="Recycled plastic granules" /><p>High-grade recycled plastics with full chain-of-custody traceability.</p><a href="index.html#contact" class="btn btn--primary">Get in Touch</a></div></div></div></li>
+        <li class="has-dropdown"><a href="index.html#products">Circular Products <span class="nav-chevron">▾</span></a><div class="dropdown"><div class="dropdown__inner"><div class="dropdown__col"><p class="dropdown__label">Products</p><a href="sustainable-merchandise.html" class="dropdown__link"><span class="dropdown__icon">👕</span><span><strong>Sustainable Merchandise</strong><small>Branded eco products</small></span></a><a href="bricks.html" class="dropdown__link"><span class="dropdown__icon">🧱</span><span><strong>Bricks</strong><small>Durable recycled plastic bricks</small></span></a><a href="lumber.html" class="dropdown__link"><span class="dropdown__icon">🪵</span><span><strong>Lumber</strong><small>Recycled plastic planks & boards</small></span></a><a href="pavers.html" class="dropdown__link"><span class="dropdown__icon">🔲</span><span><strong>Pavers</strong><small>Eco-friendly paving solutions</small></span></a></div><div class="dropdown__col"><p class="dropdown__label">More</p><a href="fabrics.html" class="dropdown__link"><span class="dropdown__icon">🧶</span><span><strong>Fabrics</strong><small>Sustainable textile materials</small></span></a><a href="recycled-plastics.html" class="dropdown__link"><span class="dropdown__icon">♻️</span><span><strong>Recycled Plastics</strong><small>Raw recycled material products</small></span></a></div></div></div></li>
+        <li class="has-dropdown"><a href="index.html#resources">Resources <span class="nav-chevron">▾</span></a><div class="dropdown dropdown--narrow"><div class="dropdown__inner"><div class="dropdown__col"><p class="dropdown__label">Learn</p><a href="webinars.html" class="dropdown__link"><span class="dropdown__icon">🎥</span><span><strong>Webinars</strong><small>Expert sessions on demand</small></span></a><a href="index.html#resources" class="dropdown__link"><span class="dropdown__icon">✏️</span><span><strong>Blogs</strong><small>Industry insights & news</small></span></a><a href="roi-whitepaper.html" class="dropdown__link"><span class="dropdown__icon">📄</span><span><strong>ROI Whitepaper</strong><small>ESG sourcing business case</small></span></a><a href="case-studies.html" class="dropdown__link"><span class="dropdown__icon">📋</span><span><strong>Case Studies</strong><small>Brand success stories</small></span></a><a href="annual-reports.html" class="dropdown__link"><span class="dropdown__icon">📊</span><span><strong>Annual Reports</strong><small>Full impact transparency</small></span></a></div></div></div></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="plastic-recovery.html">Plastic Recovery</a></li>
+      </ul>
+      <div class="nav__actions"><a href="donate.html" class="btn btn--primary">Donate</a></div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="min-height:360px;">
+    <div class="page-hero__bg">
+      <div class="page-hero__overlay" style="background:linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);"></div>
+    </div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href="index.html#resources">Resources</a> <span>/</span> <span>Annual Reports</span></div>
+      <p class="section-eyebrow section-eyebrow--light">Resources</p>
+      <h1 class="page-hero__title">Annual Reports</h1>
+      <p class="page-hero__sub">Full transparency on collector outcomes, plastic volumes, community investments, and organisational performance. Enter your details to access our reports.</p>
+    </div>
+  </section>
+
+  <!-- GATED CONTENT -->
+  <section class="gated-section">
+    <div class="container">
+      <!-- Gate Form -->
+      <div class="gate-form-wrap" id="gateForm">
+        <div class="gate-form-inner">
+          <h2>Access Our Annual Reports</h2>
+          <p>Enter your name and email to view and download all annual reports directly on this page.</p>
+          <form id="reportGateForm" onsubmit="unlockReports(event)">
+            <div class="gate-form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="gateName" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" id="gateEmail" placeholder="you@company.com" required />
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full btn--lg">Access Reports</button>
+            <p class="form-note">Your details are sent securely. No spam.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Unlocked Content (hidden by default) -->
+      <div class="gated-content" id="gatedContent" style="display:none;">
+        <div class="report-tabs">
+          <button class="report-tab report-tab--active" onclick="showReport(0, this)">2025 Report</button>
+          <button class="report-tab" onclick="showReport(1, this)">2024 Report</button>
+          <button class="report-tab" onclick="showReport(2, this)">2023 Report</button>
+        </div>
+        <div class="pdf-viewer-wrap">
+          <iframe class="pdf-viewer" id="pdfViewer" src="Annual+Report+2025+.pdf" title="Annual Report"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const reportFiles = [
+      'Annual+Report+2025+.pdf',
+      'Annual+Report+2024.pdf',
+      'Annual+Report+2023.pdf'
+    ];
+
+    function unlockReports(e) {
+      e.preventDefault();
+      const name = document.getElementById('gateName').value;
+      const email = document.getElementById('gateEmail').value;
+
+      // Send to your email via Web3Forms (free, no backend needed)
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_KEY',
+          subject: 'Annual Report Access Request',
+          from_name: name,
+          email: email,
+          to: 'samarth@plasticsforchange.com',
+          message: name + ' (' + email + ') requested access to Annual Reports'
+        })
+      });
+
+      // Unlock content regardless (don't block on API response)
+      document.getElementById('gateForm').style.display = 'none';
+      document.getElementById('gatedContent').style.display = 'block';
+    }
+
+    function showReport(index, btn) {
+      document.getElementById('pdfViewer').src = reportFiles[index];
+      document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('report-tab--active'));
+      btn.classList.add('report-tab--active');
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand"><div class="nav__logo"><img src="logo.png" alt="Plastics For Change" class="footer__logo-img" /></div><p>Changing lives through recycling since 2015. The world's only Fair Trade certified recycled plastic supply chain.</p><div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Twitter">tw</a><a href="#" aria-label="Facebook">fb</a></div></div>
+        <div class="footer__col"><h5>Products</h5><a href="rpet.html">Recycled PET</a><a href="rpe-rpp.html">Recycled PE & PP</a><a href="fibers-yarns.html">Fibers & Yarns</a><a href="fabrics.html">Fabrics</a><a href="sustainable-merchandise.html">Merchandise</a></div>
+        <div class="footer__col"><h5>Company</h5><a href="#">Our Mission</a><a href="impact.html">Impact</a><a href="#">Certifications</a><a href="epr-india.html">EPR India</a><a href="#">Careers</a></div>
+        <div class="footer__col"><h5>Resources</h5><a href="webinars.html">Webinars</a><a href="case-studies.html">Case Studies</a><a href="roi-whitepaper.html">ROI Whitepaper</a><a href="annual-reports.html">Annual Reports</a><a href="#">Partner Login</a></div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Plastics For Change. All rights reserved.</p><div class="footer__legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a></div></div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
